@@ -17,14 +17,15 @@ const MyLayout: React.FC<MyLayoutProps> = ({ children }: MyLayoutProps): JSX.Ele
                 </Sider>
                 <Layout
                     style={{
-                        padding: '0 24px 24px',
+                        
                     }}
                 >
                     <Content
                         style={{
-                            padding: 32,
+                            padding: 20,
                             margin: 0,
                             minHeight: 280,
+                           
                         }}
                     >
                         {children}

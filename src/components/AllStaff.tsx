@@ -25,7 +25,7 @@ const AllStaff: React.FC = () => {
     }
     const changeFilter = (event: String) => {
         setSelected(event);
-    
+
     }
     const searchStaff = () => {
         console.log(data);
@@ -38,34 +38,46 @@ const AllStaff: React.FC = () => {
                 <button type="button" className="out_button" ><LogoutOutlined><LogoutOutlined /></LogoutOutlined></button>
             </div>
             <div className='action'>
-                <div className='search'>
-                    <Search
+                <div className='search' >
+                    <Input 
                         placeholder="Tìm kiếm"
-                        allowClear
-                        enterButton="Search"
-                        size="large"
-                        onClick={searchStaff}
+                        onChange={searchStaff}
+                        style={{
+                            width: 200,
+                            border: "none",
+                            //   padding:" 0 0 0 ",
+
+                            borderBottom: "1px solid #d9d9d9",
+                            borderRadius: 5,
+                        }}
+
                     />
                 </div>
                 <div className='filter'>
-                    <Select
-                        defaultValue={selected}
-                        options={selectOptions}
-                        value={selected}
-                        onChange={changeFilter}
-                    />
-                    <Button
-                        size={"middle"}
-                        className="flex float-right items-center border-emerald-500 text-green-500"
-                        onClick={refreshFilter}
-                    >
-                        Làm mới
-                    </Button>
+                    <div className='filter-select'>
+                        <Select 
+                            defaultValue={selected}
+                            options={selectOptions}
+                            value={selected}
+                            onChange={changeFilter}
+                        />
+                    </div>
+                    <div className='filter-refresh'>
+                        <Button
+                            style={{
+                                color: "#8de890",
+                                borderColor: "#8de890",
+                            }}
+                            onClick={refreshFilter}
+                        >
+                            Làm mới
+                        </Button>
+                    </div>
                 </div>
                 <div className='add'>
                     <Button
                         type="primary"
-                        size={"large"}
+                        size={"middle"}
                         icon={<PlusOutlined />}
                         className="flex float-right items-center bg-blue-500 text-white"
                     >
@@ -73,7 +85,9 @@ const AllStaff: React.FC = () => {
                     </Button>
                 </div>
             </div>
-            <Table columns={columns} dataSource={data} scroll={{ x: true }} />
+            <Table columns={columns} dataSource={data} scroll={{ x: true }} pagination={{
+                pageSize: 7
+            }} />
         </div>
     )
 }

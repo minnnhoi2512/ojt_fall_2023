@@ -1,7 +1,11 @@
 import { FaBed } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { UserOutlined, UserAddOutlined, MailOutlined, ClockCircleOutlined, HomeOutlined } from '@ant-design/icons';
+// const setMenu = (item : any)=>{
+//     localStorage.setItem('key_menu', item.key);
+// }
 export const items = [
+
     {
         label: (
             <Link to='/dashboard'>Dashboard</Link>
@@ -11,12 +15,12 @@ export const items = [
 
     },
     {
-        label: "NHÂN VIÊN",
+        label: <div style={{ fontWeight: '600' }}>NHÂN VIÊN</div>,
         key: "staff",
         children: [
             {
                 label: (
-                    <Link to='/department'>Phòng Ban</Link>
+                    <Link to='/department' >Phòng Ban</Link>
 
                 ),
                 key: "department",
@@ -47,7 +51,7 @@ export const items = [
         ]
     },
     {
-        label: "TĂNG CA",
+        label: <div style={{ fontWeight: '600' }}>TĂNG CA</div>,
         key: "ot",
         children: [
             {
@@ -68,7 +72,7 @@ export const items = [
         ]
     },
     {
-        label: "NGHỈ PHÉP",
+        label: <div style={{ fontWeight: '600' }}>NGHỈ PHÉP</div>,
         key: "dayoff",
         children: [{
             label: (
@@ -88,7 +92,7 @@ export const items = [
         ]
     },
     {
-        label: "ĐƠN KHÁC",
+        label: <div style={{ fontWeight: '600' }}>ĐƠN KHÁC</div>,
         key: "another_application",
         children: [
             {
@@ -109,7 +113,7 @@ export const items = [
         ]
     },
     {
-        label: "QUẢN LÍ LƯƠNG",
+        label: <div style={{ fontWeight: '600' }}>QUẢN LÍ LƯƠNG</div>,
         key: "salary",
         children: [
             {
@@ -130,7 +134,7 @@ export const items = [
         ]
     },
     {
-        label: "HỢP ĐỒNG",
+        label: <div style={{ fontWeight: '600' }}>HỢP ĐỒNG</div>,
         key: "contract",
         children: [
             {
@@ -150,7 +154,7 @@ export const items = [
         ]
     },
     {
-        label: "TUYỂN DỤNG",
+        label: <div style={{ fontWeight: '600' }}>TUYỂN DỤNG</div>,
         key: "hiring",
         children: [
             {

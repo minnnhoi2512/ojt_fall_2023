@@ -19,7 +19,7 @@ const AllStaff: React.FC = () => {
                 <div className='add' style={{justifyContent: 'flex-end' }}>
                     <Button
                         type="primary"
-                        size="large"
+                        size="middle"
                         icon={<PlusOutlined />}
                         className="bg-blue-500 text-white"
                     >
