@@ -1,10 +1,13 @@
 import React from 'react';
+import { useLocation, Link } from 'react-router-dom';
 import { Menu, Image } from 'antd';
 import { items } from './data/itemMenu';
 import avatar from '../assets/anh.jpg'
 import '../App.css'
+import { LogoutOutlined } from '@ant-design/icons'
 const MyMenu: React.FC = () => {
-    let key = localStorage.getItem('key_menu');
+    const location = useLocation();
+    let key = location.pathname.replace('/', '');
     return (
         <div>
             <div className='profile'>
@@ -12,23 +15,21 @@ const MyMenu: React.FC = () => {
                     width={50}
                     src={avatar}
                 />
-                <p style={{ fontWeight: 'bold' }} className='name_profile'>Nguyen Van Quan Ly</p>
+                <p style={{ fontWeight: 'bold' }} className='name_profile'>Nguyen Van Quan Ly <Link to={'/'}><LogoutOutlined /></Link></p>
+                
             </div>
             <div className='menu'>
                 <Menu
                     mode="inline"
                     defaultSelectedKeys={[key || '1']}
-                    defaultOpenKeys={['staff', 'ot', 'dayoff', 'another_application','salary','contract','hiring']}
+                    defaultOpenKeys={['staff', 'ot', 'dayoff', 'another_application', 'salary', 'contract', 'hiring']}
 
                     style={{
                         height: '100%',
                         borderRight: 0,
-                        
+
                     }}
                     items={items}
-                    onSelect={(item) => {
-                        localStorage.setItem('key_menu', item.key);
-                    }}
                 />
             </div>
         </div>

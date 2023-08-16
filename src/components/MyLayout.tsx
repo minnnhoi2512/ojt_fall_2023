@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout } from 'antd';
 import MyMenu from './MyMenu';
 
-const {Footer,Content, Sider } = Layout;
+const { Footer, Content, Sider } = Layout;
 
 type MyLayoutProps = {
     children?: React.ReactNode;
@@ -17,7 +17,7 @@ const MyLayout: React.FC<MyLayoutProps> = ({ children }: MyLayoutProps): JSX.Ele
                 </Sider>
                 <Layout
                     style={{
-                        
+
                     }}
                 >
                     <Content
@@ -25,14 +25,17 @@ const MyLayout: React.FC<MyLayoutProps> = ({ children }: MyLayoutProps): JSX.Ele
                             padding: 20,
                             margin: 0,
                             minHeight: 280,
-                           
+                            background: 'white'
                         }}
                     >
                         {children}
+
                     </Content>
+                    <Footer style={{ textAlign: 'center', bottom: '0', height: '55px' }}>Ant Design ©2023 Created by Minh Hoi</Footer>
                 </Layout>
+
             </Layout>
-            <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Minh Hoi</Footer>
+
         </Layout>
     );
 }

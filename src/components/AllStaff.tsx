@@ -3,9 +3,8 @@ import { Table, Button, Select, Input } from 'antd';
 import { data } from './data/dataStaff';
 import { columns } from './data/dataColStaff';
 import { LogoutOutlined, PlusOutlined } from '@ant-design/icons'
+import { Link } from 'react-router-dom';
 import '../App.css'
-
-const { Search } = Input;
 const selectOptions = [
     {
         value: 'Chăm sóc khách hàng',
@@ -39,7 +38,7 @@ const AllStaff: React.FC = () => {
             </div>
             <div className='action'>
                 <div className='search' >
-                    <Input 
+                    <Input
                         placeholder="Tìm kiếm"
                         onChange={searchStaff}
                         style={{
@@ -55,7 +54,7 @@ const AllStaff: React.FC = () => {
                 </div>
                 <div className='filter'>
                     <div className='filter-select'>
-                        <Select 
+                        <Select
                             defaultValue={selected}
                             options={selectOptions}
                             value={selected}
@@ -75,14 +74,16 @@ const AllStaff: React.FC = () => {
                     </div>
                 </div>
                 <div className='add'>
-                    <Button
-                        type="primary"
-                        size={"middle"}
-                        icon={<PlusOutlined />}
-                        className="flex float-right items-center bg-blue-500 text-white"
-                    >
-                        Thêm nhân viên
-                    </Button>
+                    <a href='/createstaff'>
+                        <Button
+                            type="primary"
+                            size={"middle"}
+                            icon={<PlusOutlined />}
+                            className="flex float-right items-center bg-blue-500 text-white"
+                        >
+                            Thêm nhân viên
+                        </Button>
+                    </a>
                 </div>
             </div>
             <Table columns={columns} dataSource={data} scroll={{ x: true }} pagination={{

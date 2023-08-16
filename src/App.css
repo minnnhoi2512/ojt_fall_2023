@@ -61,7 +61,7 @@
 }
 
 .menu {
-  height: 610px;
+  height: 665px;
   overflow-y: scroll;
   background-color: white;
 }
@@ -77,14 +77,63 @@
   justify-content: flex-end;
   margin-bottom: 20px;
 }
-.filter{
-  margin : 0 auto;
+
+.filter {
+  margin: 0 auto;
   display: flex;
 }
-.filter-select{
-  margin-right : 10px;
+
+.filter-select {
+  margin-right: 10px;
 
 }
-.container{
+
+.container {
   overflow: none;
+}
+
+.own-contract {
+  overflow-y: scroll;
+  height: 650px;
+}
+
+.create-form {
+  overflow: hidden;
+  width: 1000px;
+  padding-left: 200px;
+}
+
+.form {
+  overflow-y: auto;
+  height: 650px;
+}
+
+.title {
+  color: blue;
+}
+
+.display-item {
+  display: flex;
+  align-items: center;
+}
+
+.background {
+
+  background-image: url(https://wallpaperaccess.com/full/1152525.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2%;
+  height: 100%;
+}
+
+.card {
+  background: white;
+}
+
+
+
+.card-title {
+  margin: 30px;
+
+  height: 80%;
 }

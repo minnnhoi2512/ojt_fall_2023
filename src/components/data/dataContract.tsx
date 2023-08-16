@@ -1,0 +1,38 @@
+export const dataContract = [
+    {
+        key: "1",
+        staffId: "1",
+        createdBy: "Tran Phu Phuoc",
+        category: "Hợp đồng xác định hạn ",
+        status: "1",
+        categorySalary: "Gross To Net",
+        dependent: "1",
+        startTime: "Thg 08 5 2023, 00:00",
+        endTime: "Thg 11 30 2023, 00:00",
+        salaryBase: "90.000.000",
+        tax: "80.000.000",
+        allowance: "0",   // phu cap
+        note: "",
+        workInWeek: "5",
+        createdAt: "Thg 08 5 2023, 00:00",
+        updatedAt: "Thg 08 5 2023, 00:00",
+    },
+    {
+        key: "2",
+        staffId: "2",
+        createdBy: "Nguyen Van Nhan Vien",
+        category: "Hợp đồng xác định hạn ",
+        status: "1",
+        categorySalary: "Gross To Net",
+        dependent: "2",
+        startTime: "Thg 08 5 2023, 00:00",
+        endTime: "Thg 11 30 2023, 00:00",
+        salaryBase: "9.000.000",
+        tax: "8.000.000",
+        allowance: "0",   // phu cap
+        note: "",
+        workInWeek: "5",
+        createdAt: "Thg 08 5 2023, 00:00",
+        updatedAt: "Thg 08 5 2023, 00:00",
+    },
+]

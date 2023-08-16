@@ -19,10 +19,11 @@ import StaffContract from "./components/StaffContract";
 import StaffOT from './components/StaffOT';
 import MyLayout from "./components/MyLayout";
 
+import Homepage from "./components/Homepage";
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <MyLayout></MyLayout>
+    element: <Homepage></Homepage>
   },
   {
     path: '/dashboard',
